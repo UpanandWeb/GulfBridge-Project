@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GulfBridge.Web", "GulfBridge.Web\GulfBridge.Web.csproj", "{F188965E-BC36-4F31-AB68-DBAF88BD14DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GulfBridge.DAL", "GulfBridge.DAL\GulfBridge.DAL.csproj", "{7207CF0F-55B3-4DF3-9862-F3A56A163D16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GulfBridge.Entity", "GulfBridge.Entity\GulfBridge.Entity.csproj", "{875A9CC3-2AEC-412D-9617-1C45E6D993D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GulfBridge.Api", "GulfBridge.Api\GulfBridge.Api.csproj", "{5D4651A0-1794-4DBD-9F04-AE75637D5C59}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F188965E-BC36-4F31-AB68-DBAF88BD14DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F188965E-BC36-4F31-AB68-DBAF88BD14DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F188965E-BC36-4F31-AB68-DBAF88BD14DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F188965E-BC36-4F31-AB68-DBAF88BD14DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7207CF0F-55B3-4DF3-9862-F3A56A163D16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7207CF0F-55B3-4DF3-9862-F3A56A163D16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7207CF0F-55B3-4DF3-9862-F3A56A163D16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7207CF0F-55B3-4DF3-9862-F3A56A163D16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{875A9CC3-2AEC-412D-9617-1C45E6D993D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{875A9CC3-2AEC-412D-9617-1C45E6D993D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{875A9CC3-2AEC-412D-9617-1C45E6D993D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{875A9CC3-2AEC-412D-9617-1C45E6D993D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D4651A0-1794-4DBD-9F04-AE75637D5C59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D4651A0-1794-4DBD-9F04-AE75637D5C59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D4651A0-1794-4DBD-9F04-AE75637D5C59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D4651A0-1794-4DBD-9F04-AE75637D5C59}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://192.168.1.10:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = GulfBridge.Api\\GulfBridge.Api.csproj
+		SccProjectName1 = GulfBridge.Api
+		SccLocalPath1 = GulfBridge.Api
+		SccProjectUniqueName2 = GulfBridge.DAL\\GulfBridge.DAL.csproj
+		SccProjectName2 = GulfBridge.DAL
+		SccLocalPath2 = GulfBridge.DAL
+		SccProjectUniqueName3 = GulfBridge.Entity\\GulfBridge.Entity.csproj
+		SccProjectName3 = GulfBridge.Entity
+		SccLocalPath3 = GulfBridge.Entity
+		SccProjectUniqueName4 = GulfBridge.Web\\GulfBridge.Web.csproj
+		SccProjectName4 = GulfBridge.Web
+		SccLocalPath4 = GulfBridge.Web
+	EndGlobalSection
+EndGlobal
