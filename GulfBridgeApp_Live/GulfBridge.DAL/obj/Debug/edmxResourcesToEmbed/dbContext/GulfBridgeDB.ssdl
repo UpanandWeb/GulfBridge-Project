@@ -1,0 +1,778 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Gulf_Bridge_db1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AplicantPersonalInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ApplicantId" Type="int" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="150" />
+    <Property Name="LastName" Type="varchar" MaxLength="150" />
+    <Property Name="MiddleName" Type="varchar" MaxLength="150" />
+    <Property Name="DOB" Type="datetime" />
+    <Property Name="PlaceOfBirth" Type="varchar" MaxLength="150" />
+    <Property Name="PotentialPlaceOfWork" Type="nvarchar" MaxLength="150" />
+    <Property Name="PassportNumber" Type="varchar" MaxLength="50" />
+    <Property Name="CountryId" Type="int" />
+    <Property Name="QIDNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Gender" Type="int" />
+    <Property Name="QatarType" Type="int" />
+    <Property Name="PAddress" Type="varchar" MaxLength="300" />
+    <Property Name="PCity" Type="varchar" MaxLength="150" />
+    <Property Name="PCountry" Type="int" />
+    <Property Name="CAddress" Type="varchar" MaxLength="300" />
+    <Property Name="CCity" Type="varchar" MaxLength="150" />
+    <Property Name="CCountry" Type="int" />
+    <Property Name="PCountryCode" Type="varchar" MaxLength="15" />
+    <Property Name="PContactNumber" Type="varchar" MaxLength="30" />
+    <Property Name="ACountryCode" Type="varchar" MaxLength="15" />
+    <Property Name="AContactNumber" Type="varchar" MaxLength="30" />
+    <Property Name="RegisteredEmail" Type="varchar" MaxLength="250" />
+    <Property Name="PassportBioFilePath" Type="varchar" MaxLength="150" />
+    <Property Name="NCCertificatePath" Type="varchar" MaxLength="150" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="UpdatedOn" Type="datetime" />
+    <Property Name="IdentityStatus" Type="int" />
+  </EntityType>
+  <EntityType Name="ApplicantAcademicInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ApplicantId" Type="int" />
+    <Property Name="FullName" Type="varchar" MaxLength="100" />
+    <Property Name="UniversityName" Type="varchar" MaxLength="300" />
+    <Property Name="CollegeName" Type="varchar" MaxLength="300" />
+    <Property Name="CollegeCity" Type="varchar" MaxLength="150" />
+    <Property Name="CollegeCountry" Type="int" />
+    <Property Name="QualificationAttained" Type="varchar" MaxLength="300" />
+    <Property Name="MajorSubject" Type="varchar" MaxLength="150" />
+    <Property Name="CertificateNo" Type="varchar" MaxLength="150" />
+    <Property Name="JoiningDate" Type="datetime" />
+    <Property Name="EndingDate" Type="datetime" />
+    <Property Name="GraduationDate" Type="datetime" />
+    <Property Name="EducationCertificatePath" Type="varchar" MaxLength="300" />
+    <Property Name="FinalMarksSheetPath" Type="varchar" MaxLength="300" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="UpdatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ApplicantAcademicStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AcademicId" Type="int" Nullable="false" />
+    <Property Name="ApplicantId" Type="int" Nullable="false" />
+    <Property Name="Qualification" Type="int" />
+    <Property Name="IssuingAuthority" Type="int" />
+    <Property Name="Country" Type="int" />
+    <Property Name="ConferredDate" Type="int" />
+    <Property Name="DurationOfStudy" Type="int" />
+    <Property Name="ModeOfStudy" Type="int" />
+    <Property Name="Comments" Type="varchar" MaxLength="300" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="128" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="128" />
+    <Property Name="UpdatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ApplicantDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" />
+    <Property Name="EmployeerId" Type="int" />
+    <Property Name="FullName" Type="varchar" MaxLength="100" />
+    <Property Name="DOB" Type="datetime" />
+    <Property Name="CurrentResidency" Type="varchar" MaxLength="100" />
+    <Property Name="PassportNumber" Type="varchar" MaxLength="30" />
+    <Property Name="ContactNumber" Type="varchar" MaxLength="15" />
+    <Property Name="EmailId" Type="varchar" MaxLength="255" />
+    <Property Name="Profession" Type="varchar" MaxLength="50" />
+    <Property Name="RefNumber" Type="varchar" MaxLength="10" />
+    <Property Name="Nationality" Type="int" />
+    <Property Name="AppicationType" Type="int" />
+    <Property Name="AppCategory" Type="int" />
+    <Property Name="AppSubCategory" Type="int" />
+    <Property Name="LicenceNumber" Type="varchar" MaxLength="50" />
+    <Property Name="QCHPNumber" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="int" />
+    <Property Name="PackageAmount" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Remarks" Type="varchar" MaxLength="100" />
+    <Property Name="IsTermsAgree" Type="bit" />
+    <Property Name="IsPaymentDone" Type="bit" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="UpdatedOn" Type="datetime" />
+    <Property Name="StatusReport_Path" Type="nvarchar(max)" />
+    <Property Name="PaymentReceiptPath" Type="nvarchar(max)" />
+    <Property Name="IsConformSubmit" Type="bit" />
+    <Property Name="PaymentOption" Type="int" />
+    <Property Name="PaymentReference" Type="varchar" MaxLength="150" />
+    <Property Name="LicenseImagepath" Type="nvarchar(max)" />
+    <Property Name="GBSRefNo" Type="nvarchar" MaxLength="150" />
+    <Property Name="CountryCode" Type="varchar" MaxLength="15" />
+    <Property Name="InProgressDate" Type="datetime" />
+    <Property Name="AnnexureReport_Path" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ApplicantProfesLicenceInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ApplicantId" Type="int" />
+    <Property Name="FullName" Type="varchar" MaxLength="150" />
+    <Property Name="IssueAuthority" Type="varchar" MaxLength="150" />
+    <Property Name="Country" Type="int" />
+    <Property Name="City" Type="nvarchar" MaxLength="150" />
+    <Property Name="LTitle" Type="varchar" MaxLength="150" />
+    <Property Name="LType" Type="int" />
+    <Property Name="LStatus" Type="int" />
+    <Property Name="LNumber" Type="varchar" MaxLength="100" />
+    <Property Name="LIssueDate" Type="datetime" />
+    <Property Name="LExpiryDate" Type="datetime" />
+    <Property Name="NursingLicencePath" Type="varchar" MaxLength="150" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="128" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="128" />
+    <Property Name="UpdatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ApplicantProfLicStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LicenseId" Type="int" Nullable="false" />
+    <Property Name="ApplicantId" Type="int" Nullable="false" />
+    <Property Name="IssuingAuthority" Type="int" />
+    <Property Name="Country" Type="int" />
+    <Property Name="Title" Type="int" />
+    <Property Name="LicenseNo" Type="int" />
+    <Property Name="Validity" Type="int" />
+    <Property Name="IssueExpiry" Type="int" />
+    <Property Name="Comments" Type="varchar" MaxLength="300" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="128" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="128" />
+    <Property Name="UpdatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ApplicantWorkExpInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ApplicantId" Type="int" />
+    <Property Name="JobDesignation" Type="varchar" MaxLength="150" />
+    <Property Name="EmployeerName" Type="varchar" MaxLength="100" />
+    <Property Name="EmployeerAddress" Type="varchar" MaxLength="150" />
+    <Property Name="EmployeerCity" Type="varchar" MaxLength="150" />
+    <Property Name="EmployeerCountry" Type="int" />
+    <Property Name="StaffId" Type="varchar" MaxLength="50" />
+    <Property Name="ECountryCode" Type="varchar" MaxLength="15" />
+    <Property Name="EmployeerContactNumber" Type="varchar" MaxLength="30" />
+    <Property Name="JoiningDate" Type="datetime" />
+    <Property Name="EndingDate" Type="datetime" />
+    <Property Name="EmployeementType" Type="int" />
+    <Property Name="WorkExpCertificatePath" Type="varchar" MaxLength="300" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="128" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="128" />
+    <Property Name="UpdatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ApplicantWorkExpStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WorkExpId" Type="int" Nullable="false" />
+    <Property Name="ApplicantId" Type="int" Nullable="false" />
+    <Property Name="IssuingAuthority" Type="int" />
+    <Property Name="Country" Type="int" />
+    <Property Name="Designation" Type="int" />
+    <Property Name="StartEndDate" Type="int" />
+    <Property Name="Comments" Type="varchar" MaxLength="300" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="128" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="128" />
+    <Property Name="UpdatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="AspNetRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaims">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ClaimType" Type="nvarchar(max)" />
+    <Property Name="ClaimValue" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogins">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" />
+    <Property Name="SecurityStamp" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="datetime" />
+    <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="int" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="RoleCustomeId" Type="int" />
+    <Property Name="UserType" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsFirstLogin" Type="bit" />
+  </EntityType>
+  <EntityType Name="Certificate_Doc1_Status">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CogsId" Type="int" Nullable="false" />
+    <Property Name="ApplicantId" Type="int" />
+    <Property Name="IssuingAuthority" Type="int" />
+    <Property Name="Country" Type="int" />
+    <Property Name="Title" Type="int" />
+    <Property Name="LicenseNo" Type="int" />
+    <Property Name="COGSValidity" Type="int" />
+    <Property Name="COGSIssueExpiryDate" Type="int" />
+    <Property Name="Comments" Type="varchar" MaxLength="300" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="128" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="300" />
+    <Property Name="UpdatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Certificate_DocumentType1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ApplicantId" Type="int" />
+    <Property Name="Name" Type="varchar" MaxLength="150" />
+    <Property Name="AuthorityName" Type="varchar" MaxLength="150" />
+    <Property Name="City" Type="varchar" MaxLength="150" />
+    <Property Name="Country" Type="int" />
+    <Property Name="CountryCode" Type="varchar" MaxLength="15" />
+    <Property Name="ContactNumber" Type="varchar" MaxLength="30" />
+    <Property Name="CertificateTitle" Type="varchar" MaxLength="150" />
+    <Property Name="CertificateType" Type="int" />
+    <Property Name="CertificateStatus" Type="int" />
+    <Property Name="CertificateNumber" Type="varchar" MaxLength="150" />
+    <Property Name="IssueDate" Type="datetime" />
+    <Property Name="ExpiryDate" Type="datetime" />
+    <Property Name="CertificatePath" Type="varchar" MaxLength="150" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="128" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="128" />
+    <Property Name="UpdatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Certificate_DocumentType2">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ApplicantId" Type="int" />
+    <Property Name="JobDesig" Type="varchar" MaxLength="150" />
+    <Property Name="EmployeerName" Type="varchar" MaxLength="150" />
+    <Property Name="Address" Type="varchar" MaxLength="150" />
+    <Property Name="City" Type="varchar" MaxLength="150" />
+    <Property Name="Country" Type="int" />
+    <Property Name="StaffId" Type="varchar" MaxLength="50" />
+    <Property Name="CountryCode" Type="varchar" MaxLength="15" />
+    <Property Name="ContactNumber" Type="varchar" MaxLength="20" />
+    <Property Name="Joiningdate" Type="datetime" />
+    <Property Name="EndingDate" Type="datetime" />
+    <Property Name="EmployeeType" Type="int" />
+    <Property Name="LogDocumentPath" Type="varchar" MaxLength="150" />
+    <Property Name="CreatedBy" Type="varbinary" MaxLength="128" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="128" />
+    <Property Name="UpdatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="EmployerDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" />
+    <Property Name="ApplicantCount" Type="int" />
+    <Property Name="EmployerName" Type="varchar" MaxLength="150" />
+    <Property Name="EmployerCRNo" Type="varchar" MaxLength="50" />
+    <Property Name="PROsName" Type="varchar" MaxLength="150" />
+    <Property Name="PROsIDNo" Type="varchar" MaxLength="50" />
+    <Property Name="EmployeerAddress" Type="varchar" MaxLength="150" />
+    <Property Name="EmployeerContactNo" Type="varchar" MaxLength="15" />
+    <Property Name="PROContactNo" Type="varchar" MaxLength="15" />
+    <Property Name="EmployerEmailaddress" Type="varchar" MaxLength="255" />
+    <Property Name="PROEmailaddress" Type="varchar" MaxLength="255" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="IsTermsAgree" Type="bit" />
+  </EntityType>
+  <EntityType Name="LetterOfAuthorization">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ApplicantId" Type="int" />
+    <Property Name="PassportNumber" Type="varchar" MaxLength="50" />
+    <Property Name="FullName" Type="varchar" MaxLength="150" />
+    <Property Name="PermanentAddress" Type="varchar" MaxLength="150" />
+    <Property Name="PostalCode" Type="varchar" MaxLength="15" />
+    <Property Name="City" Type="int" />
+    <Property Name="Country" Type="int" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="SignedLOAPath" Type="varchar" MaxLength="150" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="128" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="UpdatedBy" Type="varbinary" MaxLength="128" />
+    <Property Name="UpdatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="LogBookStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LogbookId" Type="int" Nullable="false" />
+    <Property Name="ApplicantId" Type="int" />
+    <Property Name="IssueAuthority" Type="int" />
+    <Property Name="Country" Type="int" />
+    <Property Name="Designation" Type="int" />
+    <Property Name="StartEndDate" Type="int" />
+    <Property Name="Comments" Type="varchar" MaxLength="300" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="UpdatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Mst_App_Sub_Category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Gulf_Bridge_New.dbo.Mst_Applicant_Status' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Mst_Applicant_Status">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="Mst_ApplicationCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Mst_ApplicationType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Mst_City">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="Mst_Countries">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cc_fips" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="cc_iso" Type="varchar" MaxLength="255" />
+    <Property Name="tld" Type="varchar" MaxLength="3" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TelCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Mst_EmployementType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Mst_JobDesignation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="Mst_LicenceType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="Mst_Nationality">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cc_fips" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="cc_iso" Type="varchar" MaxLength="255" />
+    <Property Name="tld" Type="varchar" MaxLength="3" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Mst_Status">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Mst_UserType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Mst_VisaType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="PaymentDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ApplicantId" Type="int" Nullable="false" />
+    <Property Name="PayAmount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="100" />
+    <Property Name="Status" Type="varchar" MaxLength="20" />
+    <Property Name="BankDescription" Type="varchar(max)" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="PaymentStructure">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AppType" Type="int" />
+    <Property Name="AppCategoryId" Type="int" />
+    <Property Name="AppSubCatgoryId" Type="int" />
+    <Property Name="PackageAmount" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="PaymentTransactionDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ApplicantId" Type="varchar" MaxLength="150" />
+    <Property Name="vpc_TxnResponseCode" Type="nvarchar" MaxLength="150" />
+    <Property Name="vpc_MerchTxnRef" Type="nvarchar" MaxLength="150" />
+    <Property Name="vpc_OrderInfo" Type="nvarchar" MaxLength="150" />
+    <Property Name="vpc_Merchant" Type="nvarchar" MaxLength="150" />
+    <Property Name="vpc_Amount" Type="nvarchar" MaxLength="150" />
+    <Property Name="vpc_Message" Type="nvarchar" MaxLength="150" />
+    <Property Name="vpc_ReceiptNo" Type="nvarchar" MaxLength="150" />
+    <Property Name="vpc_AcqResponseCode" Type="nvarchar" MaxLength="150" />
+    <Property Name="vpc_AuthorizeId" Type="nvarchar" MaxLength="150" />
+    <Property Name="vpc_BatchNo" Type="nvarchar" MaxLength="150" />
+    <Property Name="vpc_TransactionNo" Type="nvarchar" MaxLength="150" />
+    <Property Name="vpc_Card" Type="nvarchar" MaxLength="150" />
+    <Property Name="vpc_3DSECI" Type="nvarchar" MaxLength="150" />
+    <Property Name="vpc_3DSXID" Type="nvarchar" MaxLength="150" />
+    <Property Name="vpc_3DSenrolled" Type="nvarchar" MaxLength="150" />
+    <Property Name="vpc_3DSstatus" Type="nvarchar" MaxLength="150" />
+    <Property Name="vpc_VerToken" Type="nvarchar" MaxLength="150" />
+    <Property Name="vpc_VerType" Type="nvarchar" MaxLength="150" />
+    <Property Name="vpc_VerSecurityLevel" Type="nvarchar" MaxLength="150" />
+    <Property Name="vpc_VerStatus" Type="nvarchar" MaxLength="150" />
+    <Property Name="vpc_RiskOverallResult" Type="nvarchar" MaxLength="150" />
+    <Property Name="vpc_TxnReversalResult" Type="nvarchar" MaxLength="150" />
+    <Property Name="vpc_cscResultCode" Type="nvarchar" MaxLength="150" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RoleCustom">
+    <Key>
+      <PropertyRef Name="RoleCustomID" />
+    </Key>
+    <Property Name="RoleCustomID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="EmailId" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="MobileNumber" Type="varchar" MaxLength="15" />
+    <Property Name="Password" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="UserType" Type="int" Nullable="false" />
+    <Property Name="IsValidated" Type="bit" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="UpdatedBy" Type="int" />
+    <Property Name="UpdatedOn" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_ApplicantDetails_ApplicantDetails">
+    <End Role="ApplicantDetails" Type="Self.ApplicantDetails" Multiplicity="1" />
+    <End Role="ApplicantDetails1" Type="Self.ApplicantDetails" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="ApplicantDetails">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ApplicantDetails1">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ApplicantProfesLicenceInfo_ApplicantDetails">
+    <End Role="ApplicantDetails" Type="Self.ApplicantDetails" Multiplicity="0..1" />
+    <End Role="ApplicantProfesLicenceInfo" Type="Self.ApplicantProfesLicenceInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ApplicantDetails">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ApplicantProfesLicenceInfo">
+        <PropertyRef Name="ApplicantId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AspNetUsers_Mst_UserType_UserType">
+    <End Role="Mst_UserType" Type="Self.Mst_UserType" Multiplicity="0..1" />
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mst_UserType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUsers">
+        <PropertyRef Name="UserType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AspNetUsers_RoleCustom_RoleCustomeId">
+    <End Role="RoleCustom" Type="Self.RoleCustom" Multiplicity="0..1" />
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RoleCustom">
+        <PropertyRef Name="RoleCustomID" />
+      </Principal>
+      <Dependent Role="AspNetUsers">
+        <PropertyRef Name="RoleCustomeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+    <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRoles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Mst_UserType_UserType">
+    <End Role="Mst_UserType" Type="Self.Mst_UserType" Multiplicity="1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mst_UserType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="UserType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="ApplicantFormData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="applicantid" Type="int" Mode="In" />
+    <Parameter Name="formtype" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_ApplicantAcademic" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="applicantid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_ApplicantCogs" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="applicantid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_Applicantdetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="applicantid" Type="int" Mode="In" />
+    <Parameter Name="status" Type="int" Mode="In" />
+    <Parameter Name="bytype" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_ApplicantLOA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="applicantid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_ApplicantLogBook" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="applicantid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_ApplicantPersonal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="applicantid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_ApplicantProfLic" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="applicantid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_ApplicantWorkExp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="applicantid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_GetAcademicReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="applicantId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_GetApplicantDetailsByDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FromDate" Type="date" Mode="In" />
+    <Parameter Name="ToDate" Type="date" Mode="In" />
+  </Function>
+  <Function Name="sp_GetCogsReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="applicantId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_GetLicenseReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="applicantId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_GetLogbookReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="applicantId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_GetWorkExpReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="applicantId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_RemoveApplicants" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="Gulf_Bridge_db1ModelStoreContainer">
+    <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AplicantPersonalInfo" EntityType="Self.AplicantPersonalInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ApplicantAcademicInfo" EntityType="Self.ApplicantAcademicInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ApplicantAcademicStatus" EntityType="Self.ApplicantAcademicStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ApplicantDetails" EntityType="Self.ApplicantDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ApplicantProfesLicenceInfo" EntityType="Self.ApplicantProfesLicenceInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ApplicantProfLicStatus" EntityType="Self.ApplicantProfLicStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ApplicantWorkExpInfo" EntityType="Self.ApplicantWorkExpInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ApplicantWorkExpStatus" EntityType="Self.ApplicantWorkExpStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Certificate_Doc1_Status" EntityType="Self.Certificate_Doc1_Status" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Certificate_DocumentType1" EntityType="Self.Certificate_DocumentType1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Certificate_DocumentType2" EntityType="Self.Certificate_DocumentType2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployerDetails" EntityType="Self.EmployerDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LetterOfAuthorization" EntityType="Self.LetterOfAuthorization" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LogBookStatus" EntityType="Self.LogBookStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mst_App_Sub_Category" EntityType="Self.Mst_App_Sub_Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mst_ApplicationCategory" EntityType="Self.Mst_ApplicationCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mst_ApplicationType" EntityType="Self.Mst_ApplicationType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mst_City" EntityType="Self.Mst_City" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mst_Countries" EntityType="Self.Mst_Countries" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mst_EmployementType" EntityType="Self.Mst_EmployementType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mst_JobDesignation" EntityType="Self.Mst_JobDesignation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mst_LicenceType" EntityType="Self.Mst_LicenceType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mst_Nationality" EntityType="Self.Mst_Nationality" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mst_Status" EntityType="Self.Mst_Status" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mst_UserType" EntityType="Self.Mst_UserType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mst_VisaType" EntityType="Self.Mst_VisaType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PaymentDetails" EntityType="Self.PaymentDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PaymentStructure" EntityType="Self.PaymentStructure" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PaymentTransactionDetails" EntityType="Self.PaymentTransactionDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RoleCustom" EntityType="Self.RoleCustom" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mst_Applicant_Status" EntityType="Self.Mst_Applicant_Status" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[Mst_Applicant_Status].[Id] AS [Id], 
+[Mst_Applicant_Status].[Name] AS [Name]
+FROM [dbo].[Mst_Applicant_Status] AS [Mst_Applicant_Status]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_ApplicantDetails_ApplicantDetails" Association="Self.FK_ApplicantDetails_ApplicantDetails">
+      <End Role="ApplicantDetails" EntitySet="ApplicantDetails" />
+      <End Role="ApplicantDetails1" EntitySet="ApplicantDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ApplicantProfesLicenceInfo_ApplicantDetails" Association="Self.FK_ApplicantProfesLicenceInfo_ApplicantDetails">
+      <End Role="ApplicantDetails" EntitySet="ApplicantDetails" />
+      <End Role="ApplicantProfesLicenceInfo" EntitySet="ApplicantProfesLicenceInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AspNetUsers_Mst_UserType_UserType" Association="Self.FK_AspNetUsers_Mst_UserType_UserType">
+      <End Role="Mst_UserType" EntitySet="Mst_UserType" />
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AspNetUsers_RoleCustom_RoleCustomeId" Association="Self.FK_AspNetUsers_RoleCustom_RoleCustomeId">
+      <End Role="RoleCustom" EntitySet="RoleCustom" />
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Mst_UserType_UserType" Association="Self.FK_Users_Mst_UserType_UserType">
+      <End Role="Mst_UserType" EntitySet="Mst_UserType" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

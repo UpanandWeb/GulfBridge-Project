@@ -1,0 +1,1019 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Gulf_Bridge_db1ModelStoreContainer" CdmEntityContainer="Gulf_Bridge_db1Entities">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AplicantPersonalInfoes">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.AplicantPersonalInfo">
+        <MappingFragment StoreEntitySet="AplicantPersonalInfo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ApplicantId" ColumnName="ApplicantId" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="PlaceOfBirth" ColumnName="PlaceOfBirth" />
+          <ScalarProperty Name="PotentialPlaceOfWork" ColumnName="PotentialPlaceOfWork" />
+          <ScalarProperty Name="PassportNumber" ColumnName="PassportNumber" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="QIDNumber" ColumnName="QIDNumber" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="QatarType" ColumnName="QatarType" />
+          <ScalarProperty Name="PAddress" ColumnName="PAddress" />
+          <ScalarProperty Name="PCity" ColumnName="PCity" />
+          <ScalarProperty Name="PCountry" ColumnName="PCountry" />
+          <ScalarProperty Name="CAddress" ColumnName="CAddress" />
+          <ScalarProperty Name="CCity" ColumnName="CCity" />
+          <ScalarProperty Name="CCountry" ColumnName="CCountry" />
+          <ScalarProperty Name="PCountryCode" ColumnName="PCountryCode" />
+          <ScalarProperty Name="PContactNumber" ColumnName="PContactNumber" />
+          <ScalarProperty Name="ACountryCode" ColumnName="ACountryCode" />
+          <ScalarProperty Name="AContactNumber" ColumnName="AContactNumber" />
+          <ScalarProperty Name="RegisteredEmail" ColumnName="RegisteredEmail" />
+          <ScalarProperty Name="PassportBioFilePath" ColumnName="PassportBioFilePath" />
+          <ScalarProperty Name="NCCertificatePath" ColumnName="NCCertificatePath" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="IdentityStatus" ColumnName="IdentityStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ApplicantAcademicInfoes">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.ApplicantAcademicInfo">
+        <MappingFragment StoreEntitySet="ApplicantAcademicInfo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ApplicantId" ColumnName="ApplicantId" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="UniversityName" ColumnName="UniversityName" />
+          <ScalarProperty Name="CollegeName" ColumnName="CollegeName" />
+          <ScalarProperty Name="CollegeCity" ColumnName="CollegeCity" />
+          <ScalarProperty Name="CollegeCountry" ColumnName="CollegeCountry" />
+          <ScalarProperty Name="QualificationAttained" ColumnName="QualificationAttained" />
+          <ScalarProperty Name="MajorSubject" ColumnName="MajorSubject" />
+          <ScalarProperty Name="CertificateNo" ColumnName="CertificateNo" />
+          <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+          <ScalarProperty Name="EndingDate" ColumnName="EndingDate" />
+          <ScalarProperty Name="GraduationDate" ColumnName="GraduationDate" />
+          <ScalarProperty Name="EducationCertificatePath" ColumnName="EducationCertificatePath" />
+          <ScalarProperty Name="FinalMarksSheetPath" ColumnName="FinalMarksSheetPath" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ApplicantAcademicStatus">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.ApplicantAcademicStatu">
+        <MappingFragment StoreEntitySet="ApplicantAcademicStatus">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AcademicId" ColumnName="AcademicId" />
+          <ScalarProperty Name="ApplicantId" ColumnName="ApplicantId" />
+          <ScalarProperty Name="Qualification" ColumnName="Qualification" />
+          <ScalarProperty Name="IssuingAuthority" ColumnName="IssuingAuthority" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="ConferredDate" ColumnName="ConferredDate" />
+          <ScalarProperty Name="DurationOfStudy" ColumnName="DurationOfStudy" />
+          <ScalarProperty Name="ModeOfStudy" ColumnName="ModeOfStudy" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ApplicantDetails">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.ApplicantDetail">
+        <MappingFragment StoreEntitySet="ApplicantDetails">
+          <ScalarProperty Name="AnnexureReport_Path" ColumnName="AnnexureReport_Path" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="EmployeerId" ColumnName="EmployeerId" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="CurrentResidency" ColumnName="CurrentResidency" />
+          <ScalarProperty Name="PassportNumber" ColumnName="PassportNumber" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="Profession" ColumnName="Profession" />
+          <ScalarProperty Name="RefNumber" ColumnName="RefNumber" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="AppicationType" ColumnName="AppicationType" />
+          <ScalarProperty Name="AppCategory" ColumnName="AppCategory" />
+          <ScalarProperty Name="AppSubCategory" ColumnName="AppSubCategory" />
+          <ScalarProperty Name="LicenceNumber" ColumnName="LicenceNumber" />
+          <ScalarProperty Name="QCHPNumber" ColumnName="QCHPNumber" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PackageAmount" ColumnName="PackageAmount" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="IsTermsAgree" ColumnName="IsTermsAgree" />
+          <ScalarProperty Name="IsPaymentDone" ColumnName="IsPaymentDone" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="StatusReport_Path" ColumnName="StatusReport_Path" />
+          <ScalarProperty Name="PaymentReceiptPath" ColumnName="PaymentReceiptPath" />
+          <ScalarProperty Name="IsConformSubmit" ColumnName="IsConformSubmit" />
+          <ScalarProperty Name="PaymentOption" ColumnName="PaymentOption" />
+          <ScalarProperty Name="PaymentReference" ColumnName="PaymentReference" />
+          <ScalarProperty Name="LicenseImagepath" ColumnName="LicenseImagepath" />
+          <ScalarProperty Name="GBSRefNo" ColumnName="GBSRefNo" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="InProgressDate" ColumnName="InProgressDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ApplicantProfesLicenceInfoes">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.ApplicantProfesLicenceInfo">
+        <MappingFragment StoreEntitySet="ApplicantProfesLicenceInfo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ApplicantId" ColumnName="ApplicantId" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="IssueAuthority" ColumnName="IssueAuthority" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="LTitle" ColumnName="LTitle" />
+          <ScalarProperty Name="LType" ColumnName="LType" />
+          <ScalarProperty Name="LStatus" ColumnName="LStatus" />
+          <ScalarProperty Name="LNumber" ColumnName="LNumber" />
+          <ScalarProperty Name="LIssueDate" ColumnName="LIssueDate" />
+          <ScalarProperty Name="LExpiryDate" ColumnName="LExpiryDate" />
+          <ScalarProperty Name="NursingLicencePath" ColumnName="NursingLicencePath" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ApplicantProfLicStatus">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.ApplicantProfLicStatu">
+        <MappingFragment StoreEntitySet="ApplicantProfLicStatus">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="LicenseId" ColumnName="LicenseId" />
+          <ScalarProperty Name="ApplicantId" ColumnName="ApplicantId" />
+          <ScalarProperty Name="IssuingAuthority" ColumnName="IssuingAuthority" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="LicenseNo" ColumnName="LicenseNo" />
+          <ScalarProperty Name="Validity" ColumnName="Validity" />
+          <ScalarProperty Name="IssueExpiry" ColumnName="IssueExpiry" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ApplicantWorkExpInfoes">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.ApplicantWorkExpInfo">
+        <MappingFragment StoreEntitySet="ApplicantWorkExpInfo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ApplicantId" ColumnName="ApplicantId" />
+          <ScalarProperty Name="JobDesignation" ColumnName="JobDesignation" />
+          <ScalarProperty Name="EmployeerName" ColumnName="EmployeerName" />
+          <ScalarProperty Name="EmployeerAddress" ColumnName="EmployeerAddress" />
+          <ScalarProperty Name="EmployeerCity" ColumnName="EmployeerCity" />
+          <ScalarProperty Name="EmployeerCountry" ColumnName="EmployeerCountry" />
+          <ScalarProperty Name="StaffId" ColumnName="StaffId" />
+          <ScalarProperty Name="ECountryCode" ColumnName="ECountryCode" />
+          <ScalarProperty Name="EmployeerContactNumber" ColumnName="EmployeerContactNumber" />
+          <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+          <ScalarProperty Name="EndingDate" ColumnName="EndingDate" />
+          <ScalarProperty Name="EmployeementType" ColumnName="EmployeementType" />
+          <ScalarProperty Name="WorkExpCertificatePath" ColumnName="WorkExpCertificatePath" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ApplicantWorkExpStatus">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.ApplicantWorkExpStatu">
+        <MappingFragment StoreEntitySet="ApplicantWorkExpStatus">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="WorkExpId" ColumnName="WorkExpId" />
+          <ScalarProperty Name="ApplicantId" ColumnName="ApplicantId" />
+          <ScalarProperty Name="IssuingAuthority" ColumnName="IssuingAuthority" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="StartEndDate" ColumnName="StartEndDate" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.AspNetRole">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.AspNetUserClaim">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.AspNetUserLogin">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserRoles">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.AspNetUserRole">
+        <MappingFragment StoreEntitySet="AspNetUserRoles">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.AspNetUser">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="RoleCustomeId" ColumnName="RoleCustomeId" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsFirstLogin" ColumnName="IsFirstLogin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Certificate_Doc1_Status">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.Certificate_Doc1_Status">
+        <MappingFragment StoreEntitySet="Certificate_Doc1_Status">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CogsId" ColumnName="CogsId" />
+          <ScalarProperty Name="ApplicantId" ColumnName="ApplicantId" />
+          <ScalarProperty Name="IssuingAuthority" ColumnName="IssuingAuthority" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="LicenseNo" ColumnName="LicenseNo" />
+          <ScalarProperty Name="COGSValidity" ColumnName="COGSValidity" />
+          <ScalarProperty Name="COGSIssueExpiryDate" ColumnName="COGSIssueExpiryDate" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Certificate_DocumentType1">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.Certificate_DocumentType1">
+        <MappingFragment StoreEntitySet="Certificate_DocumentType1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ApplicantId" ColumnName="ApplicantId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="AuthorityName" ColumnName="AuthorityName" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="CertificateTitle" ColumnName="CertificateTitle" />
+          <ScalarProperty Name="CertificateType" ColumnName="CertificateType" />
+          <ScalarProperty Name="CertificateStatus" ColumnName="CertificateStatus" />
+          <ScalarProperty Name="CertificateNumber" ColumnName="CertificateNumber" />
+          <ScalarProperty Name="IssueDate" ColumnName="IssueDate" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="CertificatePath" ColumnName="CertificatePath" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Certificate_DocumentType2">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.Certificate_DocumentType2">
+        <MappingFragment StoreEntitySet="Certificate_DocumentType2">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ApplicantId" ColumnName="ApplicantId" />
+          <ScalarProperty Name="JobDesig" ColumnName="JobDesig" />
+          <ScalarProperty Name="EmployeerName" ColumnName="EmployeerName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="StaffId" ColumnName="StaffId" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="Joiningdate" ColumnName="Joiningdate" />
+          <ScalarProperty Name="EndingDate" ColumnName="EndingDate" />
+          <ScalarProperty Name="EmployeeType" ColumnName="EmployeeType" />
+          <ScalarProperty Name="LogDocumentPath" ColumnName="LogDocumentPath" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmployerDetails">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.EmployerDetail">
+        <MappingFragment StoreEntitySet="EmployerDetails">
+          <ScalarProperty Name="IsTermsAgree" ColumnName="IsTermsAgree" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ApplicantCount" ColumnName="ApplicantCount" />
+          <ScalarProperty Name="EmployerName" ColumnName="EmployerName" />
+          <ScalarProperty Name="EmployerCRNo" ColumnName="EmployerCRNo" />
+          <ScalarProperty Name="PROsName" ColumnName="PROsName" />
+          <ScalarProperty Name="PROsIDNo" ColumnName="PROsIDNo" />
+          <ScalarProperty Name="EmployeerAddress" ColumnName="EmployeerAddress" />
+          <ScalarProperty Name="EmployeerContactNo" ColumnName="EmployeerContactNo" />
+          <ScalarProperty Name="PROContactNo" ColumnName="PROContactNo" />
+          <ScalarProperty Name="EmployerEmailaddress" ColumnName="EmployerEmailaddress" />
+          <ScalarProperty Name="PROEmailaddress" ColumnName="PROEmailaddress" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LetterOfAuthorizations">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.LetterOfAuthorization">
+        <MappingFragment StoreEntitySet="LetterOfAuthorization">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ApplicantId" ColumnName="ApplicantId" />
+          <ScalarProperty Name="PassportNumber" ColumnName="PassportNumber" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="PermanentAddress" ColumnName="PermanentAddress" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="SignedLOAPath" ColumnName="SignedLOAPath" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LogBookStatus">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.LogBookStatu">
+        <MappingFragment StoreEntitySet="LogBookStatus">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="LogbookId" ColumnName="LogbookId" />
+          <ScalarProperty Name="ApplicantId" ColumnName="ApplicantId" />
+          <ScalarProperty Name="IssueAuthority" ColumnName="IssueAuthority" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="StartEndDate" ColumnName="StartEndDate" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mst_App_Sub_Category">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.Mst_App_Sub_Category">
+        <MappingFragment StoreEntitySet="Mst_App_Sub_Category">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mst_ApplicationCategory">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.Mst_ApplicationCategory">
+        <MappingFragment StoreEntitySet="Mst_ApplicationCategory">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mst_ApplicationType">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.Mst_ApplicationType">
+        <MappingFragment StoreEntitySet="Mst_ApplicationType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mst_City">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.Mst_City">
+        <MappingFragment StoreEntitySet="Mst_City">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mst_Countries">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.Mst_Countries">
+        <MappingFragment StoreEntitySet="Mst_Countries">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="cc_fips" ColumnName="cc_fips" />
+          <ScalarProperty Name="cc_iso" ColumnName="cc_iso" />
+          <ScalarProperty Name="tld" ColumnName="tld" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TelCode" ColumnName="TelCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mst_EmployementType">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.Mst_EmployementType">
+        <MappingFragment StoreEntitySet="Mst_EmployementType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mst_JobDesignation">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.Mst_JobDesignation">
+        <MappingFragment StoreEntitySet="Mst_JobDesignation">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mst_LicenceType">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.Mst_LicenceType">
+        <MappingFragment StoreEntitySet="Mst_LicenceType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mst_Nationality">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.Mst_Nationality">
+        <MappingFragment StoreEntitySet="Mst_Nationality">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="cc_fips" ColumnName="cc_fips" />
+          <ScalarProperty Name="cc_iso" ColumnName="cc_iso" />
+          <ScalarProperty Name="tld" ColumnName="tld" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mst_Status">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.Mst_Status">
+        <MappingFragment StoreEntitySet="Mst_Status">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mst_UserType">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.Mst_UserType">
+        <MappingFragment StoreEntitySet="Mst_UserType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mst_VisaType">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.Mst_VisaType">
+        <MappingFragment StoreEntitySet="Mst_VisaType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentDetails">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.PaymentDetail">
+        <MappingFragment StoreEntitySet="PaymentDetails">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ApplicantId" ColumnName="ApplicantId" />
+          <ScalarProperty Name="PayAmount" ColumnName="PayAmount" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="BankDescription" ColumnName="BankDescription" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentStructures">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.PaymentStructure">
+        <MappingFragment StoreEntitySet="PaymentStructure">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AppType" ColumnName="AppType" />
+          <ScalarProperty Name="AppCategoryId" ColumnName="AppCategoryId" />
+          <ScalarProperty Name="AppSubCatgoryId" ColumnName="AppSubCatgoryId" />
+          <ScalarProperty Name="PackageAmount" ColumnName="PackageAmount" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentTransactionDetails">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.PaymentTransactionDetail">
+        <MappingFragment StoreEntitySet="PaymentTransactionDetails">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ApplicantId" ColumnName="ApplicantId" />
+          <ScalarProperty Name="vpc_TxnResponseCode" ColumnName="vpc_TxnResponseCode" />
+          <ScalarProperty Name="vpc_MerchTxnRef" ColumnName="vpc_MerchTxnRef" />
+          <ScalarProperty Name="vpc_OrderInfo" ColumnName="vpc_OrderInfo" />
+          <ScalarProperty Name="vpc_Merchant" ColumnName="vpc_Merchant" />
+          <ScalarProperty Name="vpc_Amount" ColumnName="vpc_Amount" />
+          <ScalarProperty Name="vpc_Message" ColumnName="vpc_Message" />
+          <ScalarProperty Name="vpc_ReceiptNo" ColumnName="vpc_ReceiptNo" />
+          <ScalarProperty Name="vpc_AcqResponseCode" ColumnName="vpc_AcqResponseCode" />
+          <ScalarProperty Name="vpc_AuthorizeId" ColumnName="vpc_AuthorizeId" />
+          <ScalarProperty Name="vpc_BatchNo" ColumnName="vpc_BatchNo" />
+          <ScalarProperty Name="vpc_TransactionNo" ColumnName="vpc_TransactionNo" />
+          <ScalarProperty Name="vpc_Card" ColumnName="vpc_Card" />
+          <ScalarProperty Name="vpc_3DSECI" ColumnName="vpc_3DSECI" />
+          <ScalarProperty Name="vpc_3DSXID" ColumnName="vpc_3DSXID" />
+          <ScalarProperty Name="vpc_3DSenrolled" ColumnName="vpc_3DSenrolled" />
+          <ScalarProperty Name="vpc_3DSstatus" ColumnName="vpc_3DSstatus" />
+          <ScalarProperty Name="vpc_VerToken" ColumnName="vpc_VerToken" />
+          <ScalarProperty Name="vpc_VerType" ColumnName="vpc_VerType" />
+          <ScalarProperty Name="vpc_VerSecurityLevel" ColumnName="vpc_VerSecurityLevel" />
+          <ScalarProperty Name="vpc_VerStatus" ColumnName="vpc_VerStatus" />
+          <ScalarProperty Name="vpc_RiskOverallResult" ColumnName="vpc_RiskOverallResult" />
+          <ScalarProperty Name="vpc_TxnReversalResult" ColumnName="vpc_TxnReversalResult" />
+          <ScalarProperty Name="vpc_cscResultCode" ColumnName="vpc_cscResultCode" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoleCustoms">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.RoleCustom">
+        <MappingFragment StoreEntitySet="RoleCustom">
+          <ScalarProperty Name="RoleCustomID" ColumnName="RoleCustomID" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="IsValidated" ColumnName="IsValidated" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mst_Applicant_Status">
+      <EntityTypeMapping TypeName="Gulf_Bridge_db1Model.Mst_Applicant_Status">
+        <MappingFragment StoreEntitySet="Mst_Applicant_Status">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ApplicantFormData" FunctionName="Gulf_Bridge_db1Model.Store.ApplicantFormData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Gulf_Bridge_db1Model.ApplicantFormData_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="EmployeerId" ColumnName="EmployeerId" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="CurrentResidency" ColumnName="CurrentResidency" />
+          <ScalarProperty Name="PassportNumber" ColumnName="PassportNumber" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="Profession" ColumnName="Profession" />
+          <ScalarProperty Name="RefNumber" ColumnName="RefNumber" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="AppicationType" ColumnName="AppicationType" />
+          <ScalarProperty Name="AppCategory" ColumnName="AppCategory" />
+          <ScalarProperty Name="AppSubCategory" ColumnName="AppSubCategory" />
+          <ScalarProperty Name="LicenceNumber" ColumnName="LicenceNumber" />
+          <ScalarProperty Name="QCHPNumber" ColumnName="QCHPNumber" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PackageAmount" ColumnName="PackageAmount" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="IsTermsAgree" ColumnName="IsTermsAgree" />
+          <ScalarProperty Name="IsPaymentDone" ColumnName="IsPaymentDone" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="StatusReport_Path" ColumnName="StatusReport_Path" />
+          <ScalarProperty Name="PaymentReceiptPath" ColumnName="PaymentReceiptPath" />
+          <ScalarProperty Name="IsConformSubmit" ColumnName="IsConformSubmit" />
+          <ScalarProperty Name="PaymentOption" ColumnName="PaymentOption" />
+          <ScalarProperty Name="PaymentReference" ColumnName="PaymentReference" />
+          <ScalarProperty Name="LicenseImagepath" ColumnName="LicenseImagepath" />
+          <ScalarProperty Name="GBSRefNo" ColumnName="GBSRefNo" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="InProgressDate" ColumnName="InProgressDate" />
+          <ScalarProperty Name="NationalityName" ColumnName="NationalityName" />
+          <ScalarProperty Name="AppicationTypeName" ColumnName="AppicationTypeName" />
+          <ScalarProperty Name="AppCategoryName" ColumnName="AppCategoryName" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ApplicantAcademic" FunctionName="Gulf_Bridge_db1Model.Store.sp_ApplicantAcademic">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Gulf_Bridge_db1Model.sp_ApplicantAcademic_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ApplicantId" ColumnName="ApplicantId" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="UniversityName" ColumnName="UniversityName" />
+          <ScalarProperty Name="CollegeName" ColumnName="CollegeName" />
+          <ScalarProperty Name="CollegeCity" ColumnName="CollegeCity" />
+          <ScalarProperty Name="CollegeCountry" ColumnName="CollegeCountry" />
+          <ScalarProperty Name="QualificationAttained" ColumnName="QualificationAttained" />
+          <ScalarProperty Name="MajorSubject" ColumnName="MajorSubject" />
+          <ScalarProperty Name="CertificateNo" ColumnName="CertificateNo" />
+          <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+          <ScalarProperty Name="EndingDate" ColumnName="EndingDate" />
+          <ScalarProperty Name="GraduationDate" ColumnName="GraduationDate" />
+          <ScalarProperty Name="EducationCertificatePath" ColumnName="EducationCertificatePath" />
+          <ScalarProperty Name="FinalMarksSheetPath" ColumnName="FinalMarksSheetPath" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CollegeCountry1" ColumnName="CollegeCountry1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ApplicantCogs" FunctionName="Gulf_Bridge_db1Model.Store.sp_ApplicantCogs">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Gulf_Bridge_db1Model.sp_ApplicantCogs_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ApplicantId" ColumnName="ApplicantId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="AuthorityName" ColumnName="AuthorityName" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="CertificateTitle" ColumnName="CertificateTitle" />
+          <ScalarProperty Name="CertificateType" ColumnName="CertificateType" />
+          <ScalarProperty Name="CertificateStatus" ColumnName="CertificateStatus" />
+          <ScalarProperty Name="CertificateNumber" ColumnName="CertificateNumber" />
+          <ScalarProperty Name="IssueDate" ColumnName="IssueDate" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="CertificatePath" ColumnName="CertificatePath" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ApplicantLOA" FunctionName="Gulf_Bridge_db1Model.Store.sp_ApplicantLOA">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Gulf_Bridge_db1Model.sp_ApplicantLOA_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ApplicantId" ColumnName="ApplicantId" />
+          <ScalarProperty Name="PassportNumber" ColumnName="PassportNumber" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="PermanentAddress" ColumnName="PermanentAddress" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="SignedLOAPath" ColumnName="SignedLOAPath" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ApplicantLogBook" FunctionName="Gulf_Bridge_db1Model.Store.sp_ApplicantLogBook">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Gulf_Bridge_db1Model.sp_ApplicantLogBook_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ApplicantId" ColumnName="ApplicantId" />
+          <ScalarProperty Name="JobDesig" ColumnName="JobDesig" />
+          <ScalarProperty Name="EmployeerName" ColumnName="EmployeerName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="StaffId" ColumnName="StaffId" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="Joiningdate" ColumnName="Joiningdate" />
+          <ScalarProperty Name="EndingDate" ColumnName="EndingDate" />
+          <ScalarProperty Name="EmployeeType" ColumnName="EmployeeType" />
+          <ScalarProperty Name="LogDocumentPath" ColumnName="LogDocumentPath" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ApplicantPersonal" FunctionName="Gulf_Bridge_db1Model.Store.sp_ApplicantPersonal">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Gulf_Bridge_db1Model.sp_ApplicantPersonal_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ApplicantId" ColumnName="ApplicantId" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="PlaceOfBirth" ColumnName="PlaceOfBirth" />
+          <ScalarProperty Name="PotentialPlaceOfWork" ColumnName="PotentialPlaceOfWork" />
+          <ScalarProperty Name="PassportNumber" ColumnName="PassportNumber" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="QIDNumber" ColumnName="QIDNumber" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="QatarType" ColumnName="QatarType" />
+          <ScalarProperty Name="PAddress" ColumnName="PAddress" />
+          <ScalarProperty Name="PCity" ColumnName="PCity" />
+          <ScalarProperty Name="PCountry" ColumnName="PCountry" />
+          <ScalarProperty Name="CAddress" ColumnName="CAddress" />
+          <ScalarProperty Name="CCity" ColumnName="CCity" />
+          <ScalarProperty Name="CCountry" ColumnName="CCountry" />
+          <ScalarProperty Name="PCountryCode" ColumnName="PCountryCode" />
+          <ScalarProperty Name="PContactNumber" ColumnName="PContactNumber" />
+          <ScalarProperty Name="ACountryCode" ColumnName="ACountryCode" />
+          <ScalarProperty Name="AContactNumber" ColumnName="AContactNumber" />
+          <ScalarProperty Name="RegisteredEmail" ColumnName="RegisteredEmail" />
+          <ScalarProperty Name="PassportBioFilePath" ColumnName="PassportBioFilePath" />
+          <ScalarProperty Name="NCCertificatePath" ColumnName="NCCertificatePath" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="IdentityStatus" ColumnName="IdentityStatus" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ApplicantProfLic" FunctionName="Gulf_Bridge_db1Model.Store.sp_ApplicantProfLic">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Gulf_Bridge_db1Model.sp_ApplicantProfLic_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ApplicantId" ColumnName="ApplicantId" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="IssueAuthority" ColumnName="IssueAuthority" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="LTitle" ColumnName="LTitle" />
+          <ScalarProperty Name="LType" ColumnName="LType" />
+          <ScalarProperty Name="LStatus" ColumnName="LStatus" />
+          <ScalarProperty Name="LNumber" ColumnName="LNumber" />
+          <ScalarProperty Name="LIssueDate" ColumnName="LIssueDate" />
+          <ScalarProperty Name="LExpiryDate" ColumnName="LExpiryDate" />
+          <ScalarProperty Name="NursingLicencePath" ColumnName="NursingLicencePath" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="LTypeName" ColumnName="LTypeName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ApplicantWorkExp" FunctionName="Gulf_Bridge_db1Model.Store.sp_ApplicantWorkExp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Gulf_Bridge_db1Model.sp_ApplicantWorkExp_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ApplicantId" ColumnName="ApplicantId" />
+          <ScalarProperty Name="JobDesignation" ColumnName="JobDesignation" />
+          <ScalarProperty Name="EmployeerName" ColumnName="EmployeerName" />
+          <ScalarProperty Name="EmployeerAddress" ColumnName="EmployeerAddress" />
+          <ScalarProperty Name="EmployeerCity" ColumnName="EmployeerCity" />
+          <ScalarProperty Name="EmployeerCountry" ColumnName="EmployeerCountry" />
+          <ScalarProperty Name="StaffId" ColumnName="StaffId" />
+          <ScalarProperty Name="ECountryCode" ColumnName="ECountryCode" />
+          <ScalarProperty Name="EmployeerContactNumber" ColumnName="EmployeerContactNumber" />
+          <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+          <ScalarProperty Name="EndingDate" ColumnName="EndingDate" />
+          <ScalarProperty Name="EmployeementType" ColumnName="EmployeementType" />
+          <ScalarProperty Name="WorkExpCertificatePath" ColumnName="WorkExpCertificatePath" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="EmployeerCountryName" ColumnName="EmployeerCountryName" />
+          <ScalarProperty Name="EmployeementTypeName" ColumnName="EmployeementTypeName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetAcademicReport" FunctionName="Gulf_Bridge_db1Model.Store.sp_GetAcademicReport">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Gulf_Bridge_db1Model.sp_GetAcademicReport_Result">
+          <ScalarProperty Name="AcademicId" ColumnName="AcademicId" />
+          <ScalarProperty Name="QualificationName" ColumnName="QualificationName" />
+          <ScalarProperty Name="IssuingAuthorityName" ColumnName="IssuingAuthorityName" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="ConferredDateName" ColumnName="ConferredDateName" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="QualificationAttained" ColumnName="QualificationAttained" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetApplicantDetailsByDate" FunctionName="Gulf_Bridge_db1Model.Store.sp_GetApplicantDetailsByDate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Gulf_Bridge_db1Model.sp_GetApplicantDetailsByDate_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="EmployeerId" ColumnName="EmployeerId" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="CurrentResidency" ColumnName="CurrentResidency" />
+          <ScalarProperty Name="PassportNumber" ColumnName="PassportNumber" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="Profession" ColumnName="Profession" />
+          <ScalarProperty Name="RefNumber" ColumnName="RefNumber" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="AppicationType" ColumnName="AppicationType" />
+          <ScalarProperty Name="AppCategory" ColumnName="AppCategory" />
+          <ScalarProperty Name="AppSubCategory" ColumnName="AppSubCategory" />
+          <ScalarProperty Name="LicenceNumber" ColumnName="LicenceNumber" />
+          <ScalarProperty Name="QCHPNumber" ColumnName="QCHPNumber" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PackageAmount" ColumnName="PackageAmount" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="IsTermsAgree" ColumnName="IsTermsAgree" />
+          <ScalarProperty Name="IsPaymentDone" ColumnName="IsPaymentDone" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="StatusReport_Path" ColumnName="StatusReport_Path" />
+          <ScalarProperty Name="PaymentReceiptPath" ColumnName="PaymentReceiptPath" />
+          <ScalarProperty Name="IsConformSubmit" ColumnName="IsConformSubmit" />
+          <ScalarProperty Name="PaymentOption" ColumnName="PaymentOption" />
+          <ScalarProperty Name="PaymentReference" ColumnName="PaymentReference" />
+          <ScalarProperty Name="LicenseImagepath" ColumnName="LicenseImagepath" />
+          <ScalarProperty Name="GBSRefNo" ColumnName="GBSRefNo" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="InProgressDate" ColumnName="InProgressDate" />
+          <ScalarProperty Name="NationalityName" ColumnName="NationalityName" />
+          <ScalarProperty Name="AppicationTypeName" ColumnName="AppicationTypeName" />
+          <ScalarProperty Name="AppCategoryName" ColumnName="AppCategoryName" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetCogsReport" FunctionName="Gulf_Bridge_db1Model.Store.sp_GetCogsReport">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Gulf_Bridge_db1Model.sp_GetCogsReport_Result">
+          <ScalarProperty Name="CogsId" ColumnName="CogsId" />
+          <ScalarProperty Name="IssuingAuthorityName" ColumnName="IssuingAuthorityName" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="DesignationName" ColumnName="DesignationName" />
+          <ScalarProperty Name="StartEndDateName" ColumnName="StartEndDateName" />
+          <ScalarProperty Name="COGSValidityName" ColumnName="COGSValidityName" />
+          <ScalarProperty Name="COGSIssueExpiryDateName" ColumnName="COGSIssueExpiryDateName" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="AuthorityName" ColumnName="AuthorityName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetLicenseReport" FunctionName="Gulf_Bridge_db1Model.Store.sp_GetLicenseReport">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Gulf_Bridge_db1Model.sp_GetLicenseReport_Result">
+          <ScalarProperty Name="LicenseId" ColumnName="LicenseId" />
+          <ScalarProperty Name="IssuingAuthorityName" ColumnName="IssuingAuthorityName" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="TitleName" ColumnName="TitleName" />
+          <ScalarProperty Name="LicenseNoName" ColumnName="LicenseNoName" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="IssueAuthorityInfo" ColumnName="IssueAuthorityInfo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetLogbookReport" FunctionName="Gulf_Bridge_db1Model.Store.sp_GetLogbookReport">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Gulf_Bridge_db1Model.sp_GetLogbookReport_Result">
+          <ScalarProperty Name="LogbookId" ColumnName="LogbookId" />
+          <ScalarProperty Name="IssuingAuthorityName" ColumnName="IssuingAuthorityName" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="DesignationName" ColumnName="DesignationName" />
+          <ScalarProperty Name="StartEndDateName" ColumnName="StartEndDateName" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="EmployeerName" ColumnName="EmployeerName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetWorkExpReport" FunctionName="Gulf_Bridge_db1Model.Store.sp_GetWorkExpReport">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Gulf_Bridge_db1Model.sp_GetWorkExpReport_Result">
+          <ScalarProperty Name="WorkExpId" ColumnName="WorkExpId" />
+          <ScalarProperty Name="IssuingAuthorityName" ColumnName="IssuingAuthorityName" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="DesignationName" ColumnName="DesignationName" />
+          <ScalarProperty Name="StartEndDateName" ColumnName="StartEndDateName" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="EmployeerName" ColumnName="EmployeerName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_RemoveApplicants" FunctionName="Gulf_Bridge_db1Model.Store.SP_RemoveApplicants" />
+    <FunctionImportMapping FunctionImportName="sp_Applicantdetails" FunctionName="Gulf_Bridge_db1Model.Store.sp_Applicantdetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Gulf_Bridge_db1Model.sp_Applicantdetails_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="EmployeerId" ColumnName="EmployeerId" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="CurrentResidency" ColumnName="CurrentResidency" />
+          <ScalarProperty Name="PassportNumber" ColumnName="PassportNumber" />
+          <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="Profession" ColumnName="Profession" />
+          <ScalarProperty Name="RefNumber" ColumnName="RefNumber" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="AppicationType" ColumnName="AppicationType" />
+          <ScalarProperty Name="AppCategory" ColumnName="AppCategory" />
+          <ScalarProperty Name="AppSubCategory" ColumnName="AppSubCategory" />
+          <ScalarProperty Name="LicenceNumber" ColumnName="LicenceNumber" />
+          <ScalarProperty Name="QCHPNumber" ColumnName="QCHPNumber" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PackageAmount" ColumnName="PackageAmount" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="IsTermsAgree" ColumnName="IsTermsAgree" />
+          <ScalarProperty Name="IsPaymentDone" ColumnName="IsPaymentDone" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="StatusReport_Path" ColumnName="StatusReport_Path" />
+          <ScalarProperty Name="PaymentReceiptPath" ColumnName="PaymentReceiptPath" />
+          <ScalarProperty Name="IsConformSubmit" ColumnName="IsConformSubmit" />
+          <ScalarProperty Name="PaymentOption" ColumnName="PaymentOption" />
+          <ScalarProperty Name="PaymentReference" ColumnName="PaymentReference" />
+          <ScalarProperty Name="LicenseImagepath" ColumnName="LicenseImagepath" />
+          <ScalarProperty Name="GBSRefNo" ColumnName="GBSRefNo" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="InProgressDate" ColumnName="InProgressDate" />
+          <ScalarProperty Name="AnnexureReport_Path" ColumnName="AnnexureReport_Path" />
+          <ScalarProperty Name="NationalityName" ColumnName="NationalityName" />
+          <ScalarProperty Name="AppicationTypeName" ColumnName="AppicationTypeName" />
+          <ScalarProperty Name="AppCategoryName" ColumnName="AppCategoryName" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+          <ScalarProperty Name="DaysCount" ColumnName="DaysCount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

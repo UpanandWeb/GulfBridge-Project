@@ -1,0 +1,15 @@
+D:\pooja\GulfBridgeApp_Live\GulfBridge.DAL\bin\Debug\GulfBridge.DAL.dll.config
+D:\pooja\GulfBridgeApp_Live\GulfBridge.DAL\bin\Debug\GulfBridge.DAL.dll
+D:\pooja\GulfBridgeApp_Live\GulfBridge.DAL\bin\Debug\GulfBridge.DAL.pdb
+D:\pooja\GulfBridgeApp_Live\GulfBridge.DAL\bin\Debug\EntityFramework.dll
+D:\pooja\GulfBridgeApp_Live\GulfBridge.DAL\bin\Debug\GulfBridge.Entity.dll
+D:\pooja\GulfBridgeApp_Live\GulfBridge.DAL\bin\Debug\log4net.dll
+D:\pooja\GulfBridgeApp_Live\GulfBridge.DAL\bin\Debug\GulfBridge.Entity.pdb
+D:\pooja\GulfBridgeApp_Live\GulfBridge.DAL\bin\Debug\GulfBridge.Entity.dll.config
+D:\pooja\GulfBridgeApp_Live\GulfBridge.DAL\bin\Debug\EntityFramework.xml
+D:\pooja\GulfBridgeApp_Live\GulfBridge.DAL\bin\Debug\log4net.xml
+D:\pooja\GulfBridgeApp_Live\GulfBridge.DAL\obj\Debug\GulfBridge.DAL.csprojAssemblyReference.cache
+D:\pooja\GulfBridgeApp_Live\GulfBridge.DAL\obj\Debug\GulfBridge.DAL.csproj.CoreCompileInputs.cache
+D:\pooja\GulfBridgeApp_Live\GulfBridge.DAL\obj\Debug\GulfBridge.DAL.csproj.CopyComplete
+D:\pooja\GulfBridgeApp_Live\GulfBridge.DAL\obj\Debug\GulfBridge.DAL.dll
+D:\pooja\GulfBridgeApp_Live\GulfBridge.DAL\obj\Debug\GulfBridge.DAL.pdb

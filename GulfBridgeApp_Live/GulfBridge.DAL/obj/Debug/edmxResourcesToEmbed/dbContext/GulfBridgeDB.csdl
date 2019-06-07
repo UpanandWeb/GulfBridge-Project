@@ -1,0 +1,1159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Gulf_Bridge_db1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ContextKey" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Model" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AplicantPersonalInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ApplicantId" Type="Int32" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="MiddleName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="DOB" Type="DateTime" Precision="3" />
+    <Property Name="PlaceOfBirth" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="PotentialPlaceOfWork" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="PassportNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CountryId" Type="Int32" />
+    <Property Name="QIDNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="Int32" />
+    <Property Name="QatarType" Type="Int32" />
+    <Property Name="PAddress" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="PCity" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="PCountry" Type="Int32" />
+    <Property Name="CAddress" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="CCity" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="CCountry" Type="Int32" />
+    <Property Name="PCountryCode" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="PContactNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ACountryCode" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="AContactNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="RegisteredEmail" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="PassportBioFilePath" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="NCCertificatePath" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="IdentityStatus" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ApplicantAcademicInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ApplicantId" Type="Int32" />
+    <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UniversityName" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="CollegeName" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="CollegeCity" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="CollegeCountry" Type="Int32" />
+    <Property Name="QualificationAttained" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="MajorSubject" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="CertificateNo" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="JoiningDate" Type="DateTime" Precision="3" />
+    <Property Name="EndingDate" Type="DateTime" Precision="3" />
+    <Property Name="GraduationDate" Type="DateTime" Precision="3" />
+    <Property Name="EducationCertificatePath" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="FinalMarksSheetPath" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ApplicantAcademicStatu">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AcademicId" Type="Int32" Nullable="false" />
+    <Property Name="ApplicantId" Type="Int32" Nullable="false" />
+    <Property Name="Qualification" Type="Int32" />
+    <Property Name="IssuingAuthority" Type="Int32" />
+    <Property Name="Country" Type="Int32" />
+    <Property Name="ConferredDate" Type="Int32" />
+    <Property Name="DurationOfStudy" Type="Int32" />
+    <Property Name="ModeOfStudy" Type="Int32" />
+    <Property Name="Comments" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ApplicantDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeerId" Type="Int32" />
+    <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DOB" Type="DateTime" Precision="3" />
+    <Property Name="CurrentResidency" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PassportNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ContactNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="EmailId" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Profession" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RefNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Nationality" Type="Int32" />
+    <Property Name="AppicationType" Type="Int32" />
+    <Property Name="AppCategory" Type="Int32" />
+    <Property Name="AppSubCategory" Type="Int32" />
+    <Property Name="LicenceNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="QCHPNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="PackageAmount" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Remarks" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IsTermsAgree" Type="Boolean" />
+    <Property Name="IsPaymentDone" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="StatusReport_Path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentReceiptPath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsConformSubmit" Type="Boolean" />
+    <Property Name="PaymentOption" Type="Int32" />
+    <Property Name="PaymentReference" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="LicenseImagepath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GBSRefNo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="CountryCode" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="InProgressDate" Type="DateTime" Precision="3" />
+    <Property Name="AnnexureReport_Path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ApplicantProfesLicenceInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ApplicantId" Type="Int32" />
+    <Property Name="FullName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="IssueAuthority" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Country" Type="Int32" />
+    <Property Name="City" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="LTitle" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="LType" Type="Int32" />
+    <Property Name="LStatus" Type="Int32" />
+    <Property Name="LNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LIssueDate" Type="DateTime" Precision="3" />
+    <Property Name="LExpiryDate" Type="DateTime" Precision="3" />
+    <Property Name="NursingLicencePath" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ApplicantProfLicStatu">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LicenseId" Type="Int32" Nullable="false" />
+    <Property Name="ApplicantId" Type="Int32" Nullable="false" />
+    <Property Name="IssuingAuthority" Type="Int32" />
+    <Property Name="Country" Type="Int32" />
+    <Property Name="Title" Type="Int32" />
+    <Property Name="LicenseNo" Type="Int32" />
+    <Property Name="Validity" Type="Int32" />
+    <Property Name="IssueExpiry" Type="Int32" />
+    <Property Name="Comments" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ApplicantWorkExpInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ApplicantId" Type="Int32" />
+    <Property Name="JobDesignation" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="EmployeerName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="EmployeerAddress" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="EmployeerCity" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="EmployeerCountry" Type="Int32" />
+    <Property Name="StaffId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ECountryCode" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="EmployeerContactNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="JoiningDate" Type="DateTime" Precision="3" />
+    <Property Name="EndingDate" Type="DateTime" Precision="3" />
+    <Property Name="EmployeementType" Type="Int32" />
+    <Property Name="WorkExpCertificatePath" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ApplicantWorkExpStatu">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WorkExpId" Type="Int32" Nullable="false" />
+    <Property Name="ApplicantId" Type="Int32" Nullable="false" />
+    <Property Name="IssuingAuthority" Type="Int32" />
+    <Property Name="Country" Type="Int32" />
+    <Property Name="Designation" Type="Int32" />
+    <Property Name="StartEndDate" Type="Int32" />
+    <Property Name="Comments" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="AspNetRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="AspNetUserRoles" Relationship="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" FromRole="AspNetRoles" ToRole="AspNetUserRoles" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogin">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProviderKey" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserRole">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RoleId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="AspNetRole" Relationship="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" FromRole="AspNetUserRoles" ToRole="AspNetRoles" />
+  </EntityType>
+  <EntityType Name="AspNetUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+    <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="Int32" />
+    <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RoleCustomeId" Type="Int32" />
+    <Property Name="UserType" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsFirstLogin" Type="Boolean" />
+    <NavigationProperty Name="Mst_UserType" Relationship="Self.FK_AspNetUsers_Mst_UserType_UserType" FromRole="AspNetUsers" ToRole="Mst_UserType" />
+    <NavigationProperty Name="RoleCustom" Relationship="Self.FK_AspNetUsers_RoleCustom_RoleCustomeId" FromRole="AspNetUsers" ToRole="RoleCustom" />
+  </EntityType>
+  <EntityType Name="Certificate_Doc1_Status">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CogsId" Type="Int32" Nullable="false" />
+    <Property Name="ApplicantId" Type="Int32" />
+    <Property Name="IssuingAuthority" Type="Int32" />
+    <Property Name="Country" Type="Int32" />
+    <Property Name="Title" Type="Int32" />
+    <Property Name="LicenseNo" Type="Int32" />
+    <Property Name="COGSValidity" Type="Int32" />
+    <Property Name="COGSIssueExpiryDate" Type="Int32" />
+    <Property Name="Comments" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Certificate_DocumentType1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ApplicantId" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="AuthorityName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Country" Type="Int32" />
+    <Property Name="CountryCode" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="ContactNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CertificateTitle" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="CertificateType" Type="Int32" />
+    <Property Name="CertificateStatus" Type="Int32" />
+    <Property Name="CertificateNumber" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="IssueDate" Type="DateTime" Precision="3" />
+    <Property Name="ExpiryDate" Type="DateTime" Precision="3" />
+    <Property Name="CertificatePath" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Certificate_DocumentType2">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ApplicantId" Type="Int32" />
+    <Property Name="JobDesig" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="EmployeerName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Country" Type="Int32" />
+    <Property Name="StaffId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CountryCode" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="ContactNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Joiningdate" Type="DateTime" Precision="3" />
+    <Property Name="EndingDate" Type="DateTime" Precision="3" />
+    <Property Name="EmployeeType" Type="Int32" />
+    <Property Name="LogDocumentPath" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Binary" MaxLength="128" FixedLength="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="EmployerDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ApplicantCount" Type="Int32" />
+    <Property Name="EmployerName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="EmployerCRNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PROsName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="PROsIDNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EmployeerAddress" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="EmployeerContactNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="PROContactNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="EmployerEmailaddress" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="PROEmailaddress" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsTermsAgree" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="LetterOfAuthorization">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ApplicantId" Type="Int32" />
+    <Property Name="PassportNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FullName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="PermanentAddress" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="PostalCode" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="Int32" />
+    <Property Name="Country" Type="Int32" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="SignedLOAPath" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Binary" MaxLength="128" FixedLength="false" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="LogBookStatu">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LogbookId" Type="Int32" Nullable="false" />
+    <Property Name="ApplicantId" Type="Int32" />
+    <Property Name="IssueAuthority" Type="Int32" />
+    <Property Name="Country" Type="Int32" />
+    <Property Name="Designation" Type="Int32" />
+    <Property Name="StartEndDate" Type="Int32" />
+    <Property Name="Comments" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Mst_App_Sub_Category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Mst_ApplicationCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Mst_ApplicationType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Mst_City">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Mst_Countries">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cc_fips" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cc_iso" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="tld" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TelCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Mst_EmployementType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Mst_JobDesignation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Mst_LicenceType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Mst_Nationality">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cc_fips" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cc_iso" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="tld" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Mst_Status">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Mst_UserType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="AspNetUsers" Relationship="Self.FK_AspNetUsers_Mst_UserType_UserType" FromRole="Mst_UserType" ToRole="AspNetUsers" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Users_Mst_UserType_UserType" FromRole="Mst_UserType" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Mst_VisaType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PaymentDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ApplicantId" Type="Int32" Nullable="false" />
+    <Property Name="PayAmount" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="BankDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="PaymentStructure">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AppType" Type="Int32" />
+    <Property Name="AppCategoryId" Type="Int32" />
+    <Property Name="AppSubCatgoryId" Type="Int32" />
+    <Property Name="PackageAmount" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="IsActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="PaymentTransactionDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ApplicantId" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="vpc_TxnResponseCode" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="vpc_MerchTxnRef" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="vpc_OrderInfo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="vpc_Merchant" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="vpc_Amount" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="vpc_Message" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="vpc_ReceiptNo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="vpc_AcqResponseCode" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="vpc_AuthorizeId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="vpc_BatchNo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="vpc_TransactionNo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="vpc_Card" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="vpc_3DSECI" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="vpc_3DSXID" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="vpc_3DSenrolled" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="vpc_3DSstatus" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="vpc_VerToken" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="vpc_VerType" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="vpc_VerSecurityLevel" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="vpc_VerStatus" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="vpc_RiskOverallResult" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="vpc_TxnReversalResult" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="vpc_cscResultCode" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="RoleCustom">
+    <Key>
+      <PropertyRef Name="RoleCustomID" />
+    </Key>
+    <Property Name="RoleCustomID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="AspNetUsers" Relationship="Self.FK_AspNetUsers_RoleCustom_RoleCustomeId" FromRole="RoleCustom" ToRole="AspNetUsers" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EmailId" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MobileNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserType" Type="Int32" Nullable="false" />
+    <Property Name="IsValidated" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Mst_UserType" Relationship="Self.FK_Users_Mst_UserType_UserType" FromRole="Users" ToRole="Mst_UserType" />
+  </EntityType>
+  <EntityType Name="Mst_Applicant_Status">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+    <End Role="AspNetRoles" Type="Self.AspNetRole" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRoles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AspNetUsers_Mst_UserType_UserType">
+    <End Role="Mst_UserType" Type="Self.Mst_UserType" Multiplicity="0..1" />
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mst_UserType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUsers">
+        <PropertyRef Name="UserType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AspNetUsers_RoleCustom_RoleCustomeId">
+    <End Role="RoleCustom" Type="Self.RoleCustom" Multiplicity="0..1" />
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RoleCustom">
+        <PropertyRef Name="RoleCustomID" />
+      </Principal>
+      <Dependent Role="AspNetUsers">
+        <PropertyRef Name="RoleCustomeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Mst_UserType_UserType">
+    <End Role="Mst_UserType" Type="Self.Mst_UserType" Multiplicity="1" />
+    <End Role="Users" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mst_UserType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="UserType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Gulf_Bridge_db1Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />
+    <EntitySet Name="AplicantPersonalInfoes" EntityType="Self.AplicantPersonalInfo" />
+    <EntitySet Name="ApplicantAcademicInfoes" EntityType="Self.ApplicantAcademicInfo" />
+    <EntitySet Name="ApplicantAcademicStatus" EntityType="Self.ApplicantAcademicStatu" />
+    <EntitySet Name="ApplicantDetails" EntityType="Self.ApplicantDetail" />
+    <EntitySet Name="ApplicantProfesLicenceInfoes" EntityType="Self.ApplicantProfesLicenceInfo" />
+    <EntitySet Name="ApplicantProfLicStatus" EntityType="Self.ApplicantProfLicStatu" />
+    <EntitySet Name="ApplicantWorkExpInfoes" EntityType="Self.ApplicantWorkExpInfo" />
+    <EntitySet Name="ApplicantWorkExpStatus" EntityType="Self.ApplicantWorkExpStatu" />
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRole" />
+    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaim" />
+    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogin" />
+    <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRole" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUser" />
+    <EntitySet Name="Certificate_Doc1_Status" EntityType="Self.Certificate_Doc1_Status" />
+    <EntitySet Name="Certificate_DocumentType1" EntityType="Self.Certificate_DocumentType1" />
+    <EntitySet Name="Certificate_DocumentType2" EntityType="Self.Certificate_DocumentType2" />
+    <EntitySet Name="EmployerDetails" EntityType="Self.EmployerDetail" />
+    <EntitySet Name="LetterOfAuthorizations" EntityType="Self.LetterOfAuthorization" />
+    <EntitySet Name="LogBookStatus" EntityType="Self.LogBookStatu" />
+    <EntitySet Name="Mst_App_Sub_Category" EntityType="Self.Mst_App_Sub_Category" />
+    <EntitySet Name="Mst_ApplicationCategory" EntityType="Self.Mst_ApplicationCategory" />
+    <EntitySet Name="Mst_ApplicationType" EntityType="Self.Mst_ApplicationType" />
+    <EntitySet Name="Mst_City" EntityType="Self.Mst_City" />
+    <EntitySet Name="Mst_Countries" EntityType="Self.Mst_Countries" />
+    <EntitySet Name="Mst_EmployementType" EntityType="Self.Mst_EmployementType" />
+    <EntitySet Name="Mst_JobDesignation" EntityType="Self.Mst_JobDesignation" />
+    <EntitySet Name="Mst_LicenceType" EntityType="Self.Mst_LicenceType" />
+    <EntitySet Name="Mst_Nationality" EntityType="Self.Mst_Nationality" />
+    <EntitySet Name="Mst_Status" EntityType="Self.Mst_Status" />
+    <EntitySet Name="Mst_UserType" EntityType="Self.Mst_UserType" />
+    <EntitySet Name="Mst_VisaType" EntityType="Self.Mst_VisaType" />
+    <EntitySet Name="PaymentDetails" EntityType="Self.PaymentDetail" />
+    <EntitySet Name="PaymentStructures" EntityType="Self.PaymentStructure" />
+    <EntitySet Name="PaymentTransactionDetails" EntityType="Self.PaymentTransactionDetail" />
+    <EntitySet Name="RoleCustoms" EntityType="Self.RoleCustom" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="Mst_Applicant_Status" EntityType="Self.Mst_Applicant_Status" />
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AspNetUsers_Mst_UserType_UserType" Association="Self.FK_AspNetUsers_Mst_UserType_UserType">
+      <End Role="Mst_UserType" EntitySet="Mst_UserType" />
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AspNetUsers_RoleCustom_RoleCustomeId" Association="Self.FK_AspNetUsers_RoleCustom_RoleCustomeId">
+      <End Role="RoleCustom" EntitySet="RoleCustoms" />
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Mst_UserType_UserType" Association="Self.FK_Users_Mst_UserType_UserType">
+      <End Role="Mst_UserType" EntitySet="Mst_UserType" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <FunctionImport Name="ApplicantFormData" ReturnType="Collection(Gulf_Bridge_db1Model.ApplicantFormData_Result)">
+      <Parameter Name="applicantid" Mode="In" Type="Int32" />
+      <Parameter Name="formtype" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ApplicantAcademic" ReturnType="Collection(Gulf_Bridge_db1Model.sp_ApplicantAcademic_Result)">
+      <Parameter Name="applicantid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ApplicantCogs" ReturnType="Collection(Gulf_Bridge_db1Model.sp_ApplicantCogs_Result)">
+      <Parameter Name="applicantid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ApplicantLOA" ReturnType="Collection(Gulf_Bridge_db1Model.sp_ApplicantLOA_Result)">
+      <Parameter Name="applicantid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ApplicantLogBook" ReturnType="Collection(Gulf_Bridge_db1Model.sp_ApplicantLogBook_Result)">
+      <Parameter Name="applicantid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ApplicantPersonal" ReturnType="Collection(Gulf_Bridge_db1Model.sp_ApplicantPersonal_Result)">
+      <Parameter Name="applicantid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ApplicantProfLic" ReturnType="Collection(Gulf_Bridge_db1Model.sp_ApplicantProfLic_Result)">
+      <Parameter Name="applicantid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ApplicantWorkExp" ReturnType="Collection(Gulf_Bridge_db1Model.sp_ApplicantWorkExp_Result)">
+      <Parameter Name="applicantid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_GetAcademicReport" ReturnType="Collection(Gulf_Bridge_db1Model.sp_GetAcademicReport_Result)">
+      <Parameter Name="applicantId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_GetApplicantDetailsByDate" ReturnType="Collection(Gulf_Bridge_db1Model.sp_GetApplicantDetailsByDate_Result)">
+      <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="sp_GetCogsReport" ReturnType="Collection(Gulf_Bridge_db1Model.sp_GetCogsReport_Result)">
+      <Parameter Name="applicantId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_GetLicenseReport" ReturnType="Collection(Gulf_Bridge_db1Model.sp_GetLicenseReport_Result)">
+      <Parameter Name="applicantId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_GetLogbookReport" ReturnType="Collection(Gulf_Bridge_db1Model.sp_GetLogbookReport_Result)">
+      <Parameter Name="applicantId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_GetWorkExpReport" ReturnType="Collection(Gulf_Bridge_db1Model.sp_GetWorkExpReport_Result)">
+      <Parameter Name="applicantId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(Gulf_Bridge_db1Model.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(Gulf_Bridge_db1Model.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <AssociationSet Name="FK_ApplicantDetails_ApplicantDetails" Association="Gulf_Bridge_db1Model.FK_ApplicantDetails_ApplicantDetails">
+      <End Role="ApplicantDetail" EntitySet="ApplicantDetails" />
+      <End Role="ApplicantDetail1" EntitySet="ApplicantDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ApplicantProfesLicenceInfo_ApplicantDetails" Association="Gulf_Bridge_db1Model.FK_ApplicantProfesLicenceInfo_ApplicantDetails">
+      <End Role="ApplicantDetail" EntitySet="ApplicantDetails" />
+      <End Role="ApplicantProfesLicenceInfo" EntitySet="ApplicantProfesLicenceInfoes" />
+    </AssociationSet>
+    <FunctionImport Name="SP_RemoveApplicants" />
+    <FunctionImport Name="sp_Applicantdetails" ReturnType="Collection(Gulf_Bridge_db1Model.sp_Applicantdetails_Result)">
+      <Parameter Name="applicantid" Mode="In" Type="Int32" />
+      <Parameter Name="status" Mode="In" Type="Int32" />
+      <Parameter Name="bytype" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="ApplicantFormData_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="UserId" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="EmployeerId" Nullable="true" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="DOB" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CurrentResidency" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="PassportNumber" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="ContactNumber" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="EmailId" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="Profession" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="RefNumber" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Nationality" Nullable="true" />
+    <Property Type="Int32" Name="AppicationType" Nullable="true" />
+    <Property Type="Int32" Name="AppCategory" Nullable="true" />
+    <Property Type="Int32" Name="AppSubCategory" Nullable="true" />
+    <Property Type="String" Name="LicenceNumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="QCHPNumber" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Status" Nullable="true" />
+    <Property Type="Decimal" Name="PackageAmount" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Remarks" Nullable="true" MaxLength="100" />
+    <Property Type="Boolean" Name="IsTermsAgree" Nullable="true" />
+    <Property Type="Boolean" Name="IsPaymentDone" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="Int32" Name="CreatedBy" Nullable="true" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="UpdatedBy" Nullable="true" />
+    <Property Type="DateTime" Name="UpdatedOn" Nullable="true" Precision="23" />
+    <Property Type="String" Name="StatusReport_Path" Nullable="true" />
+    <Property Type="String" Name="PaymentReceiptPath" Nullable="true" />
+    <Property Type="Boolean" Name="IsConformSubmit" Nullable="true" />
+    <Property Type="Int32" Name="PaymentOption" Nullable="true" />
+    <Property Type="String" Name="PaymentReference" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="LicenseImagepath" Nullable="true" />
+    <Property Type="String" Name="GBSRefNo" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="CountryCode" Nullable="true" MaxLength="15" />
+    <Property Type="DateTime" Name="InProgressDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="NationalityName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="AppicationTypeName" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="AppCategoryName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="StatusName" Nullable="false" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="sp_ApplicantAcademic_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="ApplicantId" Nullable="true" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="UniversityName" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="CollegeName" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="CollegeCity" Nullable="true" MaxLength="150" />
+    <Property Type="Int32" Name="CollegeCountry" Nullable="true" />
+    <Property Type="String" Name="QualificationAttained" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="MajorSubject" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="CertificateNo" Nullable="true" MaxLength="150" />
+    <Property Type="DateTime" Name="JoiningDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="EndingDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="GraduationDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="EducationCertificatePath" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="FinalMarksSheetPath" Nullable="true" MaxLength="300" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="Int32" Name="CreatedBy" Nullable="true" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="UpdatedBy" Nullable="true" />
+    <Property Type="DateTime" Name="UpdatedOn" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CollegeCountry1" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_ApplicantCogs_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="ApplicantId" Nullable="true" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="AuthorityName" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="150" />
+    <Property Type="Int32" Name="Country" Nullable="true" />
+    <Property Type="String" Name="CountryCode" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="ContactNumber" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="CertificateTitle" Nullable="true" MaxLength="150" />
+    <Property Type="Int32" Name="CertificateType" Nullable="true" />
+    <Property Type="Int32" Name="CertificateStatus" Nullable="true" />
+    <Property Type="String" Name="CertificateNumber" Nullable="true" MaxLength="150" />
+    <Property Type="DateTime" Name="IssueDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ExpiryDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CertificatePath" Nullable="true" MaxLength="150" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="128" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="true" Precision="23" />
+    <Property Type="String" Name="UpdatedBy" Nullable="true" MaxLength="128" />
+    <Property Type="DateTime" Name="UpdatedOn" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CountryName" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_ApplicantLOA_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="ApplicantId" Nullable="true" />
+    <Property Type="String" Name="PassportNumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="PermanentAddress" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="PostalCode" Nullable="true" MaxLength="15" />
+    <Property Type="Int32" Name="City" Nullable="true" />
+    <Property Type="Int32" Name="Country" Nullable="true" />
+    <Property Type="DateTime" Name="Date" Nullable="true" Precision="23" />
+    <Property Type="String" Name="SignedLOAPath" Nullable="true" MaxLength="150" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="128" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="true" Precision="23" />
+    <Property Type="Binary" Name="UpdatedBy" Nullable="true" MaxLength="128" />
+    <Property Type="DateTime" Name="UpdatedOn" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="sp_ApplicantLogBook_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="ApplicantId" Nullable="true" />
+    <Property Type="String" Name="JobDesig" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="EmployeerName" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="150" />
+    <Property Type="Int32" Name="Country" Nullable="true" />
+    <Property Type="String" Name="StaffId" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CountryCode" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="ContactNumber" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="Joiningdate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="EndingDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="EmployeeType" Nullable="true" />
+    <Property Type="String" Name="LogDocumentPath" Nullable="true" MaxLength="150" />
+    <Property Type="Binary" Name="CreatedBy" Nullable="true" MaxLength="128" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="true" Precision="23" />
+    <Property Type="String" Name="UpdatedBy" Nullable="true" MaxLength="128" />
+    <Property Type="DateTime" Name="UpdatedOn" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CountryName" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_ApplicantPersonal_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="ApplicantId" Nullable="false" />
+    <Property Type="String" Name="FirstName" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="LastName" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="MiddleName" Nullable="true" MaxLength="150" />
+    <Property Type="DateTime" Name="DOB" Nullable="true" Precision="23" />
+    <Property Type="String" Name="PlaceOfBirth" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="PotentialPlaceOfWork" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="PassportNumber" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="CountryId" Nullable="true" />
+    <Property Type="String" Name="QIDNumber" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Gender" Nullable="true" />
+    <Property Type="Int32" Name="QatarType" Nullable="true" />
+    <Property Type="String" Name="PAddress" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="PCity" Nullable="true" MaxLength="150" />
+    <Property Type="Int32" Name="PCountry" Nullable="true" />
+    <Property Type="String" Name="CAddress" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="CCity" Nullable="true" MaxLength="150" />
+    <Property Type="Int32" Name="CCountry" Nullable="true" />
+    <Property Type="String" Name="PCountryCode" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="PContactNumber" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="ACountryCode" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="AContactNumber" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="RegisteredEmail" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="PassportBioFilePath" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="NCCertificatePath" Nullable="true" MaxLength="150" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="Int32" Name="CreatedBy" Nullable="true" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="UpdatedBy" Nullable="true" />
+    <Property Type="DateTime" Name="UpdatedOn" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="IdentityStatus" Nullable="true" />
+    <Property Type="String" Name="CountryName" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_ApplicantProfLic_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="ApplicantId" Nullable="true" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="IssueAuthority" Nullable="true" MaxLength="150" />
+    <Property Type="Int32" Name="Country" Nullable="true" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="LTitle" Nullable="true" MaxLength="150" />
+    <Property Type="Int32" Name="LType" Nullable="true" />
+    <Property Type="Int32" Name="LStatus" Nullable="true" />
+    <Property Type="String" Name="LNumber" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="LIssueDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="LExpiryDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="NursingLicencePath" Nullable="true" MaxLength="150" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="128" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="true" Precision="23" />
+    <Property Type="String" Name="UpdatedBy" Nullable="true" MaxLength="128" />
+    <Property Type="DateTime" Name="UpdatedOn" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CountryName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="LTypeName" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="sp_ApplicantWorkExp_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="ApplicantId" Nullable="true" />
+    <Property Type="String" Name="JobDesignation" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="EmployeerName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="EmployeerAddress" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="EmployeerCity" Nullable="true" MaxLength="150" />
+    <Property Type="Int32" Name="EmployeerCountry" Nullable="true" />
+    <Property Type="String" Name="StaffId" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ECountryCode" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="EmployeerContactNumber" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="JoiningDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="EndingDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="EmployeementType" Nullable="true" />
+    <Property Type="String" Name="WorkExpCertificatePath" Nullable="true" MaxLength="300" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="128" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="true" Precision="23" />
+    <Property Type="String" Name="UpdatedBy" Nullable="true" MaxLength="128" />
+    <Property Type="DateTime" Name="UpdatedOn" Nullable="true" Precision="23" />
+    <Property Type="String" Name="EmployeerCountryName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="EmployeementTypeName" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_GetAcademicReport_Result">
+    <Property Type="Int32" Name="AcademicId" Nullable="false" />
+    <Property Type="String" Name="QualificationName" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="IssuingAuthorityName" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="CountryName" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="ConferredDateName" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Comments" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="QualificationAttained" Nullable="true" MaxLength="300" />
+  </ComplexType>
+  <ComplexType Name="sp_GetApplicantDetailsByDate_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="UserId" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="EmployeerId" Nullable="true" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="DOB" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CurrentResidency" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="PassportNumber" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="ContactNumber" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="EmailId" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="Profession" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="RefNumber" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Nationality" Nullable="true" />
+    <Property Type="Int32" Name="AppicationType" Nullable="true" />
+    <Property Type="Int32" Name="AppCategory" Nullable="true" />
+    <Property Type="Int32" Name="AppSubCategory" Nullable="true" />
+    <Property Type="String" Name="LicenceNumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="QCHPNumber" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Status" Nullable="true" />
+    <Property Type="Decimal" Name="PackageAmount" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Remarks" Nullable="true" MaxLength="100" />
+    <Property Type="Boolean" Name="IsTermsAgree" Nullable="true" />
+    <Property Type="Boolean" Name="IsPaymentDone" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="Int32" Name="CreatedBy" Nullable="true" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="UpdatedBy" Nullable="true" />
+    <Property Type="DateTime" Name="UpdatedOn" Nullable="true" Precision="23" />
+    <Property Type="String" Name="StatusReport_Path" Nullable="true" />
+    <Property Type="String" Name="PaymentReceiptPath" Nullable="true" />
+    <Property Type="Boolean" Name="IsConformSubmit" Nullable="true" />
+    <Property Type="Int32" Name="PaymentOption" Nullable="true" />
+    <Property Type="String" Name="PaymentReference" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="LicenseImagepath" Nullable="true" />
+    <Property Type="String" Name="GBSRefNo" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="CountryCode" Nullable="true" MaxLength="15" />
+    <Property Type="DateTime" Name="InProgressDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="NationalityName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="AppicationTypeName" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="AppCategoryName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="StatusName" Nullable="false" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="sp_GetCogsReport_Result">
+    <Property Type="Int32" Name="CogsId" Nullable="false" />
+    <Property Type="String" Name="IssuingAuthorityName" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="CountryName" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="DesignationName" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="StartEndDateName" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="COGSValidityName" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="COGSIssueExpiryDateName" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Comments" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="AuthorityName" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="sp_GetLicenseReport_Result">
+    <Property Type="Int32" Name="LicenseId" Nullable="false" />
+    <Property Type="String" Name="IssuingAuthorityName" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="CountryName" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="TitleName" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="LicenseNoName" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Comments" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="IssueAuthorityInfo" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="sp_GetLogbookReport_Result">
+    <Property Type="Int32" Name="LogbookId" Nullable="false" />
+    <Property Type="String" Name="IssuingAuthorityName" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="CountryName" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="DesignationName" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="StartEndDateName" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Comments" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="EmployeerName" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="sp_GetWorkExpReport_Result">
+    <Property Type="Int32" Name="WorkExpId" Nullable="false" />
+    <Property Type="String" Name="IssuingAuthorityName" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="CountryName" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="DesignationName" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="StartEndDateName" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="Comments" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="EmployeerName" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <Association Name="FK_ApplicantDetails_ApplicantDetails">
+    <End Type="Gulf_Bridge_db1Model.ApplicantDetail" Role="ApplicantDetail" Multiplicity="1" />
+    <End Type="Gulf_Bridge_db1Model.ApplicantDetail" Role="ApplicantDetail1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="ApplicantDetail">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ApplicantDetail1">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ApplicantProfesLicenceInfo_ApplicantDetails">
+    <End Type="Gulf_Bridge_db1Model.ApplicantDetail" Role="ApplicantDetail" Multiplicity="0..1" />
+    <End Type="Gulf_Bridge_db1Model.ApplicantProfesLicenceInfo" Role="ApplicantProfesLicenceInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ApplicantDetail">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ApplicantProfesLicenceInfo">
+        <PropertyRef Name="ApplicantId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="sp_Applicantdetails_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="UserId" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="EmployeerId" Nullable="true" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="DOB" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CurrentResidency" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="PassportNumber" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="ContactNumber" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="EmailId" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="Profession" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="RefNumber" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="Nationality" Nullable="true" />
+    <Property Type="Int32" Name="AppicationType" Nullable="true" />
+    <Property Type="Int32" Name="AppCategory" Nullable="true" />
+    <Property Type="Int32" Name="AppSubCategory" Nullable="true" />
+    <Property Type="String" Name="LicenceNumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="QCHPNumber" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Status" Nullable="true" />
+    <Property Type="Decimal" Name="PackageAmount" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="String" Name="Remarks" Nullable="true" MaxLength="100" />
+    <Property Type="Boolean" Name="IsTermsAgree" Nullable="true" />
+    <Property Type="Boolean" Name="IsPaymentDone" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+    <Property Type="Int32" Name="CreatedBy" Nullable="true" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="UpdatedBy" Nullable="true" />
+    <Property Type="DateTime" Name="UpdatedOn" Nullable="true" Precision="23" />
+    <Property Type="String" Name="StatusReport_Path" Nullable="true" />
+    <Property Type="String" Name="PaymentReceiptPath" Nullable="true" />
+    <Property Type="Boolean" Name="IsConformSubmit" Nullable="true" />
+    <Property Type="Int32" Name="PaymentOption" Nullable="true" />
+    <Property Type="String" Name="PaymentReference" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="LicenseImagepath" Nullable="true" />
+    <Property Type="String" Name="GBSRefNo" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="CountryCode" Nullable="true" MaxLength="15" />
+    <Property Type="DateTime" Name="InProgressDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="AnnexureReport_Path" Nullable="true" />
+    <Property Type="String" Name="NationalityName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AppicationTypeName" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="AppCategoryName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="StatusName" Nullable="false" MaxLength="30" />
+    <Property Type="Int32" Name="DaysCount" Nullable="true" />
+  </ComplexType>
+</Schema>

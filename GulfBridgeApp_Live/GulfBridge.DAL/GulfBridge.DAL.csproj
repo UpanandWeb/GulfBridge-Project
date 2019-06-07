@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7207CF0F-55B3-4DF3-9862-F3A56A163D16}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GulfBridge.DAL</RootNamespace>
+    <AssemblyName>GulfBridge.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseDAL.cs" />
+    <Compile Include="DAL\AccountDAL.cs" />
+    <Compile Include="DAL\AdminDAL.cs" />
+    <Compile Include="DAL\ApplicantDAL.cs" />
+    <Compile Include="DAL\CommonDAL.cs" />
+    <Compile Include="DAL\EmployerDAL.cs" />
+    <Compile Include="DAL\GulfBridgeDAL.cs" />
+    <Compile Include="DAL\MinistryDAL.cs" />
+    <Compile Include="DAL\UserDAL.cs" />
+    <Compile Include="dbContext\AplicantPersonalInfo.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\ApplicantAcademicInfo.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\ApplicantAcademicStatu.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\ApplicantDetail.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\ApplicantFormData_Result.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\ApplicantProfesLicenceInfo.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\ApplicantProfLicStatu.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\ApplicantWorkExpInfo.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\ApplicantWorkExpStatu.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\AspNetRole.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\AspNetUser.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\AspNetUserClaim.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\AspNetUserLogin.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\AspNetUserRole.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\Certificate_Doc1_Status.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\Certificate_DocumentType1.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\Certificate_DocumentType2.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\C__MigrationHistory.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\EmployerDetail.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\GulfBridgeDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GulfBridgeDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\GulfBridgeDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\GulfBridgeDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GulfBridgeDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\LetterOfAuthorization.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\LogBookStatu.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\Mst_Applicant_Status.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\Mst_ApplicationCategory.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\Mst_ApplicationType.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\Mst_App_Sub_Category.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\Mst_City.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\Mst_Countries.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\Mst_EmployementType.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\Mst_JobDesignation.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\Mst_LicenceType.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\Mst_Nationality.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\Mst_Status.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\Mst_UserType.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\Mst_VisaType.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\PaymentDetail.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\PaymentStructure.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\PaymentTransactionDetail.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\RoleCustom.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\sp_ApplicantAcademic_Result.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\sp_ApplicantCogs_Result.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\sp_Applicantdetails_Result.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\sp_ApplicantLOA_Result.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\sp_ApplicantLogBook_Result.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\sp_ApplicantPersonal_Result.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\sp_ApplicantProfLic_Result.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\sp_ApplicantWorkExp_Result.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\sp_GetAcademicReport_Result.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\sp_GetApplicantDetailsByDate_Result.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\sp_GetCogsReport_Result.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\sp_GetLicenseReport_Result.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\sp_GetLogbookReport_Result.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\sp_GetWorkExpReport_Result.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\sp_helpdiagrams_Result.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbContext\User.cs">
+      <DependentUpon>GulfBridgeDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Enum\PaymentEnum.cs" />
+    <Compile Include="GulfWebEntityCustom.cs" />
+    <Compile Include="IDAL\IAccountDAL.cs" />
+    <Compile Include="IDAL\IAdminDAL.cs" />
+    <Compile Include="IDAL\IApplicantDAL.cs" />
+    <Compile Include="IDAL\ICommonDAL.cs" />
+    <Compile Include="IDAL\IEmployerDAL.cs" />
+    <Compile Include="IDAL\IGulfBridgeDAL.cs" />
+    <Compile Include="IDAL\IMinistryDAL.cs" />
+    <Compile Include="IDAL\IUserDAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GulfBridge.Entity\GulfBridge.Entity.csproj">
+      <Project>{875a9cc3-2aec-412d-9617-1c45e6d993d9}</Project>
+      <Name>GulfBridge.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="dbContext\GulfBridgeDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GulfBridgeDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="dbContext\GulfBridgeDB.edmx.diagram">
+      <DependentUpon>GulfBridgeDB.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dbContext\GulfBridgeDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GulfBridgeDB.edmx</DependentUpon>
+      <LastGenOutput>GulfBridgeDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="dbContext\GulfBridgeDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GulfBridgeDB.edmx</DependentUpon>
+      <LastGenOutput>GulfBridgeDB.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
